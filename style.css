@@ -56,9 +56,9 @@ body {
   font-size: 8.5pt;
 }
 
-h2 {
-  break-before: right;
-}
+/* h1 {
+  break-before: left;
+} */
 
 img (
   width: 100%;
@@ -73,6 +73,19 @@ p:first-child {
   margin-top: 0;
 }
 
+.bigwords{
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 18em;
+  /* writing-mode:vertical-rl; */
+  transform: rotate(-90deg);
+  line-height: 0.7em;
+  break-before:page;
+  position:absolute;
+  bottom: 1in;
+  /* position:center;
+  bottom: 1in; */
+}
+
 @media print {
   body {
     background: pink;
@@ -83,15 +96,151 @@ p:first-child {
   size: 5in 8in;
   margin-top: 0.25in;
   margin-bottom: 0.5in;
+  bleed: 0.25in;
+  marks: crop;
 }
+
 @page:left {
+  margin-right: 0.5in;
   margin-left: 0.25in;
-  margin-right: 1in;
+  margin-top: 0.25in;
+  margin-bottom: 0.25in;
+  /* background-color: green;     */
+  color: cornflowerblue;
+
+
+  @left-middle {
+    content: counter(page); 
+    text-transform: uppercase;
+  }
+
+  @top-center {
+    content: "journal title";
+    text-transform: uppercase;
+  }
+
+  @bottom-center {
+    content:"'open book'";
+    text-transform: uppercase;
+  }
+
+  @top-left {
+    content: "date written 2022";
+    text-orientation: sideways;
+    text-transform: uppercase;
+  }
+
   @bottom-left {
-    content: counter(page);
+    content:"time of day";
+    text-transform: uppercase;
   }
 }
+
 @page:right {
-  margin-left: 1in;
+  margin-left: 0.5in;
   margin-right: 0.25in;
+  margin-top: 0.25in;
+  margin-bottom: 0.25in;
+  /* background-color:rgb(255, 192, 250); */
+  color:orangered;
+
+
+  
+  @top-center {
+    content: "journal title";
+    text-transform: uppercase;
+  }
+/* 
+  @bottom-left {
+    content:attr(h2);
+  } */
+
+  @top-right {
+    content: "date written 2022";
+    text-orientation: sideways;
+    text-transform: uppercase;
+  }
+
+  @right-middle {
+    content: counter(page); 
+    text-transform: uppercase;
+  }
+
+  @bottom-right {
+    content:"time of day";
+    text-transform: uppercase;
+  }
 }
+
+#pg2{
+  font-family: 'Manrope', sans-serif;
+}
+
+#pg3{
+  font-family: 'Chakra Petch', sans-serif;
+}
+
+#pg4{
+  font-family: 'Climate Crisis', cursive;
+}
+
+#pg5{
+  font-family: 'Macondo', cursive;
+}
+
+#pg6{
+  font-family: 'Metal', cursive;
+}
+
+#pg7{
+  font-family: 'Pirata One', cursive;
+}
+
+#pg8{
+  font-family: 'Press Start 2P', cursive;
+}
+
+#pg9{
+  font-family: 'Quintessential', cursive;
+}
+
+#pg10{
+  font-family: 'Sarina', cursive;
+}
+
+#pg11{
+  font-family: 'Silkscreen', cursive;
+}
+
+#pg12{
+  font-family: 'Smokum', cursive;
+}
+
+#pg13{
+  font-family: 'Unbounded', cursive;
+}
+
+#pg14{
+  font-family: 'UnifrakturCook', cursive;
+}
+
+#pg15{
+  font-family: 'Times New Roman', Times, serif
+}
+
+
+
+/* 
+font-family: 'Chakra Petch', sans-serif;
+font-family: 'Climate Crisis', cursive;
+font-family: 'Macondo', cursive;
+font-family: 'Manrope', sans-serif;
+font-family: 'Metal', cursive;
+font-family: 'Pirata One', cursive;
+font-family: 'Press Start 2P', cursive;
+font-family: 'Quintessential', cursive;
+font-family: 'Sarina', cursive;
+font-family: 'Silkscreen', cursive;
+font-family: 'Smokum', cursive;
+font-family: 'Unbounded', cursive;
+font-family: 'UnifrakturCook', cursive; */
