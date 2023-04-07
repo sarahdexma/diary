@@ -76,15 +76,16 @@ p:first-child {
 
 .title{
   font-family: 'Nanum Myeongjo', serif;
-  font-size: 18em;
-  font-kerning: auto;
-  hanging-punctuation: right;
+  font-size: 30em;
+  letter-spacing: -0.3in;
+;  hanging-punctuation: right;
   transform: rotate(-90deg);
+
   kerning: 5px;
   /* break-after: right; */
   position: absolute;
-  right: -0.83em;
-  bottom: 0.58em;
+  right: -0.73em;
+  bottom: 0.18em;
   letter-spacing: −8em;
 }
 
@@ -216,7 +217,8 @@ p:first-child {
   position: absolute;
     width: 8in;
   letter-spacing: -0.1in;
-  right:-1.15in;
+  /* right:-1.15in;   */
+  right:-0.63in;
   bottom:2.85in;
 }
 
@@ -225,7 +227,7 @@ p:first-child {
   position: absolute;
   letter-spacing: -0.1in;
   right:-0.175in;
-  bottom:0.5in;
+  bottom:0.05in;
 }
 
 #pg6{
@@ -301,17 +303,35 @@ p:first-child {
 #pg14{
   font-family: 'UnifrakturCook', cursive;
   position: absolute;
-  right: -0.88in;
-  bottom:2.33in;
-  line-height: 1.6in;
+  right: -0.75in;
+  bottom:2.7in;
+  line-height: 1.25in;
   width:8in;
 }
 
 #pg15{
   font-family: 'Times New Roman', Times, serif
+  position: absolute;
+  right: -1.57in;
+  bottom:1.4in;
+  line-height: 1.7in;
+  width:8in;
 }
 
+#pg16{
+  font-family: 'Nanum Myeongjo', serif;
+  font-size: 30em;
+  letter-spacing: -0.3in;
+;  hanging-punctuation: right;
+  transform: rotate(-90deg);
 
+  kerning: 5px;
+  /* break-after: right; */
+  position: absolute;
+  right: -0.08em;
+  bottom: 2.45in;
+  letter-spacing: −8em;
+}
 
 
 /* 
