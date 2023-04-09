@@ -50,7 +50,7 @@ table {
 /* end of reset */ 
 
 body {
-  font-family: sans-serif;
+  font-family: Helvetica, sans-serif;
   background: lightgray;
   counter-reset: page;
   font-size: 8.5pt;
@@ -61,9 +61,9 @@ body {
 } */
 
 
-img (
+img {
   width: 100%;
-)
+}
 
 .two-col {
   column-count: 2;
@@ -100,16 +100,12 @@ p:first-child {
   bottom: 1in;
   /* position:center;
   bottom: 1in; */
-  string-set: h1 contents; 
+  /* string-set: h1 contents;  */
 
 }
 
 
-@media print {
-  body {
-    background: pink;
-  }
-}
+
 
 
 @page {
@@ -125,7 +121,6 @@ p:first-child {
   margin-left: 0.25in;
   margin-top: 0.25in;
   margin-bottom: 0.25in;
-  /* background-color: green;     */
   color: cornflowerblue;
 
 
@@ -135,7 +130,7 @@ p:first-child {
   }
 
   @top-center {
-    content: "journal title";
+    content: "secrets";
     text-transform: uppercase;
   }
 
@@ -145,13 +140,13 @@ p:first-child {
   }
 
   @top-left {
-    content: "date written 2022";
+    content: "secrets";
     text-orientation: sideways;
     text-transform: uppercase;
   }
 
   @bottom-left {
-    content:"time of day";
+    content:"SDM";
     text-transform: uppercase;
   }
 
@@ -163,21 +158,18 @@ p:first-child {
   margin-top: 0.25in;
   margin-bottom: 0.25in;
   /* background-color:rgb(255, 192, 250); */
-  color:orangered;
+  /* color:orangered; */
+  color: fuchsia;
 
 
   
   @top-center {
-    content: "journal title";
+    content: "are no";
     text-transform: uppercase;
   }
-/* 
-  @bottom-left {
-    content:attr(h2);
-  } */
 
   @top-right {
-    content: "date written 2022";
+    content: "fun";
     text-orientation: sideways;
     text-transform: uppercase;
   }
@@ -188,10 +180,59 @@ p:first-child {
   }
 
   @bottom-right {
-    content:"time of day";
+    content:"00:00 XX";
     text-transform: uppercase;
   }
 }
+
+@page:first{
+   margin-left: 0.5in;
+  margin-right: 0.25in;
+  margin-top: 0.25in;
+  margin-bottom: 0.25in;
+  /* color:fuchsia; */
+  @bottom-right {
+    content:"00:00 XX";
+    text-transform: uppercase;
+  }
+  @right-middle {
+    content: "0"; 
+    text-transform: uppercase;
+  }
+  @top-right {
+    content: "2022";
+    text-transform: uppercase;
+  }
+  @top-center {
+    content: "“open book”";
+    text-transform: uppercase;
+  }
+}
+
+@page:nth-of-type(2){
+
+  @top-center {
+    content: "arrest me";
+    text-transform:uppercase;
+  }
+
+  @bottom-center {
+    content:"“open book”";
+    text-transform: uppercase;
+  }
+
+  @top-left {
+    content: "04/15/2022";
+    text-orientation: sideways;
+    text-transform: uppercase;
+  }
+
+  @bottom-left {
+    content:"07:39 AM";
+    text-transform: uppercase;
+  }
+}
+
 
 
 
@@ -333,6 +374,13 @@ p:first-child {
   letter-spacing: −8em;
 }
 
+.the-end{
+  width: 1.5in;
+  position: absolute;
+  left: 2in;
+  top: 0.82in;
+  font-family: 'Nanum Myeongjo', serif;
+}
 
 /* 
 font-family: 'Chakra Petch', sans-serif;
@@ -348,3 +396,18 @@ font-family: 'Silkscreen', cursive;
 font-family: 'Smokum', cursive;
 font-family: 'Unbounded', cursive;
 font-family: 'UnifrakturCook', cursive; */
+
+
+@page {
+  size: 4.75in 8in;  /* original width (5") – bleed (0.25") */
+  bleed: 0.25in;
+  marks: crop;
+} 
+@page:left {
+  margin-left: 0.5in;
+  margin-right: 0.75in; /* original width (1") – bleed (0.25") */
+}
+@page:right {
+  margin-left: 0.75in; /* original width (1") – bleed (0.25") */
+  margin-right: 0.25in; 
+}
